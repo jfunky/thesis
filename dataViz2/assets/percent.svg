@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 40" style="enable-background:new 0 0 250 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F26522;}
+	.st1{font-family:'NewsCycle';}
+	.st2{font-size:11px;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g>
+	<rect x="200.5" y="0.5" width="49" height="39"/>
+	<path d="M249,1v38h-48V1H249 M250,0h-50v40h50V0L250,0z"/>
+</g>
+<g>
+	<rect class="st0" width="200" height="40"/>
+</g>
+<text transform="matrix(1 0 0 1 13.9917 17.0806)" class="st1 st2">Mining + Manufacturing + Transportation </text>
+<text transform="matrix(1 0 0 1 13.9917 30.2806)" class="st1 st2">+ Retail</text>
+<text transform="matrix(1 0 0 1 206.1045 17.4756)" class="st3 st1 st2">Use +</text>
+<text transform="matrix(1 0 0 1 206.1045 30.6756)" class="st3 st1 st2">Disposal</text>
+</svg>
