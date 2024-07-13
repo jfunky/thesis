@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="960_12_col.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <!-- sketches position below -->
+    <script src="heart.js"></script>
+    <script src="tomato.js"></script>
+    <script src="empireStBdg.js"></script>
+    <script src="clock.js"></script>
+    <script src="guess.js"></script>
+    <script src="nav.js"></script>
+  </head>
+  <body>
+    <!-- <div class="container_12 clearfix">
+      <div class="grid_12" id="top"><a name="energyUnits"</a></div>
+    </div> -->
+    <div class="container_12 clearfix">
+      		<nav class="topnav">
+            <ul>
+      				<!-- <li><a class="active" href="#energyUnits"><h1>Manifest Energy</h1><h2>| Energy Units</h2></a></li> -->
+      				<li><a class="active" href="#energyUnits"><h2>Energy Units</h2></a></li>
+      				<li><a href="#embodiedEnergy"><h2>Embodied Energy of Electronics</h2></a></li>
+      				<li><a href="#organizations"><h2>Organizations & Resources</h2></a></li>
+              <li><a href="#about"><h2>About</h2></li>
+      			</ul>
+    		</nav>
+    </div>
+    <div class="container_12 clearfix" id="energyUnits"><a name="energyUnits"</a>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <p> A joule is equal to the energy transferred to an object when a force of one newton acts on that object in the direction of its motion through a distance of one meter. </p>
+        <div id="first"></div>
+        <p>1 joule is about equivalent to the energy of two heartbeats. Or lifting 100 grams 1 meter. Or the energy released when 100 grams falls 1 meter. </p>
+        <div id="second"></div>
+      </div>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <p>A watt hour is equal to the work done by one watt (1 joule per second) acting for one hour.</p>
+        <p> 1 watt hour is 3,600 joules. Or, the energy to lift 100 grams 3,600 meters. Or, the energy released when 100 grams falls 3,600 meters. That's about the height of 8 Empire State Buildings stacked on top of each other.</p>
+        <div id="sketch-right">
+          <!-- empire state building sketch -->
+        </div>
+      </div>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <p>The life cycle of electronic devices includes the mining and processing of natural resources, manufacturing, transport, retail, use, and its reuse, recycling or disposal. </p>
+        <p>Embodied energy is the energy consumed by all of the processes associated with production: the life cycle up until the use phase.</p>
+        <img src="assets/productLifeCycle.svg" alt="Electronics production life cycle" style="width:300px;">
+        <h2 id="question">How much energy does it take to produce a smartphone? </h2>
+        <!-- <form method="POST" action="/formsubmission"> -->
+        <input type="text" id="amount" name="amount"><br/>
+        <div class = "center">
+          <input class="button" id="joulesButton" type="submit" name="submit" value="Joules">
+          <input class="button" id ="watthrButton" type="submit" name="test" value="Watt hours">
+        </div>
+        <div class="p5" id="how-much"></div>
+      </div>
+    </div>
+    <!-- <div class="break" id="embodiedEnergy"></div> -->
+    <div class="container_12 clearfix" id="embodiedEnergy"><a name="embodiedEnergy"</a>
+      <div class="grid_4">
+        <!-- <h2 class="titles">Embodied Energy</h2> -->
+        <div id="placeholder"></div>
+        <p> An efficient LED lightbulb consumes 10 watt hours of energy when it is kept on for 1 hour. </p>
+        <div id="lightbulb"></div>
+        <p> One of these light bulbs on for 4 days (100 hours), or 100 lightbulbs on for 1 hour, consumes 1 kilowatt hour of energy.</p>
+        <p> 1,000 watt hours = 1 kilowatt hour </p><br>
+        <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" style="width:300px;">
+      </div>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <p> Producing one smartphone consumes about 100 kilowatt hours of energy. That would be 10,000 lightbulb hours: a light bulb turned on for 416 days. </p>
+        <div id="lightbulbs">
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+          <img src="assets/100LightBulbs.svg" alt="100 lightbulbs" >
+        </div>
+      </div>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <p>Through a combination of energy-intensive production methods, planned obsolescence, and a 2-5 year use window, many modern electronic devices have an embodied energy of 70-80%. That is, 70-80% of the energy consumed by the entire lifecycle of these products is associated with their production phase.</p>
+        <img id="percent" src="assets/percent.svg" alt="80 percent">
+        <p>This means we consume the most energy when we buy or replace our laptops, tablets, e-readers, smartphones, Internet of Things devices, and really anything that includes an integrated circuit. </p>
+        <img class="icons" src="assets/retail.svg" alt="Retail phase">
+        <p>As an individual, it's difficult to change the infrastructure and supply chains on which an entire industry relies. One way to address the problem is to extend the life of your devices through repair. </p>
+        <img class="icons" src="assets/repair.svg" alt="Repair phase">
+        <p>Network connectivity also adds to energy consumption. The information communication technology (ICT) sector represents 3-5% of global energy consumption, and this percentage is expected to grow. This estimate does not take into account the production of internet infrastructure, like servers and data centers.</p>
+        <p>Data centers are a huge proportion of internet energy use, and blockchain technologies are exacerbating this.</p>
+        <p>It is important to examine the risks associated with global communications networks that depend on a supply of cheap energy, and our role in the life cycle of electronics.</p>
+        <p></p>
+      </div>
+    </div>
+    <!-- <div class="break" id="organizations"></div> -->
+    <div class="container_12 clearfix" id="organizations"><a name="organizations"</a>
+      <div class="grid_4">
+        <!-- <h2 class="titles">Organizations & Resources</h2>
+        <h4 class="titles">Advancing Electronics Sustainability</h4> -->
+        <div id="placeholder"></div>
+        <div class="org">
+          <h3>For Consumers</h3>
+          <p class="blurb">Tools, resources, and media, to help make more ecologically conscious purchase, use, and disposal choices.</p>
+          <p><a href="https://www.greenpeace.org/usa/reports/greener-electronics-2017/">Greenpeace Guide to Greener Electronics</a></p>
+          <p>Ecological responsibility rating system for consumer electronics brands.</p>
+          <p><a href="http://sciencebasedtargets.org/companies-taking-action/ ">Companies Taking Action</a></p>
+          <p>List of companies committing to science-based targets to reduce carbon emissions.</p>
+          <p><a href="https://www.ifixit.com/">iFixit</a></p>
+          <p>Open source guides for repairing common consumer electronics items. Ranking and scores for product repairability. Advocates for Right to Repair legislation.</p>
+          <p><a href="https://repair.org/">The Repair Association</a></p>
+          <p>Advocates for Right to Repair legislation.</p>
+          <p><a href="https://www.fairphone.com/en/">Fairphone</a></p>
+          <p>Company creating modular, repairable smartphones and advancing ethical sourcing.</p>
+          <p><a href="http://www.iameco.com/">iameco</a></p>
+          <p>Company creating modular, repairable computers and advancing ethical sourcing.</p>
+          <p><a href="https://www.bestbuy.com/site/clp/recycling/pcmcat149900050025.c?id=pcmcat149900050025">Electronics and Appliances Recycling at Best Buy</a></p>
+          <p>Free e-waste recycling at Best Buy (fees for TVs and computer monitors in Pennsylvania & Illinois.).</p>
+          <p><a href="https://www.staples.com/sbd/cre/marketing/sustainability-center/recycling-services/">Electronics Recycling at Staples</a></p>
+          <p>Free e-waste recycling at Staples.</p>
+          <p><a href="https://www.itu.int/en/ITU-D/Climate-Change/Pages/Global-E-waste-Monitor-2017.aspx">Global E-Waste Monitor</a></p>
+          <p>A comprehensive overview of global E-Waste statistics.</p>
+          <p><a href="https://www.youtube.com/watch?v=D56nut_9e8s">The Lightbulb Conspiracy</a></p>
+          <p>Documentary on the history of planned obsolescence.</p>
+          <p><a href="https://paigesarlin.info/the-last-slide-projector-2006/">The Last Slide Projector</a></p>
+          <p>Documentary on the history of the slide projector and it's obsolescence.</p>
+          <p><a href="https://www.aljazeera.com/programmes/specialseries/2017/10/death-design-171019054750796.html">Death By Design</a></p>
+          <p>Documentary on the electronics industry effects on human health and the environment.</p>
+          <p><a href="https://www.youtube.com/watch?v=7x4ASxHIrEA">This is what we die for: Child labour in the DRC cobalt mines</a></p>
+          <p>Amnesty International documentary on human rights abuses in the cobalt supply chain.</p>
+          <p><a href="https://storyofstuff.org/">Story of Stuff</a></p>
+          <p>Web series and podcast on product lifecycles.</p>
+        </div>
+      </div>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <div class="org">
+          <h3>For Companies</h3>
+          <p class="blurb">Tools for producers and designers interested in assessing the ecological impact of their products, or changing the way their source, collect, and discard what they make.</p>
+          <p><a href="http://www.sustainableminds.com/">Sustainable Minds</a></p>
+          <p>User-friendly lifecycle assessment software for more environmentally conscious product design.</p>
+          <p><a href="http://www.openlca.org/">OpenLCA</a></p>
+          <p>Open source lifecycle assessment software.</p>
+          <p><a href="https://www.pre-sustainability.com/sustainability-consulting/sustainable-practices/custom-sustainability-software">SimaPro</a></p>
+          <p>Industry standard, customizable lifecycle assessment software.</p>
+          <p><a href="http://www.circularecology.com/embodied-energy-and-carbon-footprint-database.html">The ICE database</a></p>
+          <p>Inventory of embodied energy and carbon database for assessing projects.</p>
+          <p><a href="http://greenelectronicscouncil.org/">Green Electronics Council</a></p>
+          <p>Advocates for sustainable Information Technology purchasing decisions and maintainers of EPEAT (Electronic Product Environmental Assessment Tool) database.</p>
+          <p><a href="http://www.electronicstakeback.com/">Electronics TakeBack Coalition</a></p>
+          <p>A coalition of organizations promoting green design, responsible recycling, and extended producer responsibility in the electronics industry.</p>
+          <p><a href="https://sustainableelectronics.org/">SERI</a></p>
+          <p>The housing-body for the R2 Standard for responsible reuse, repair, and recycling of electronic products.</p>
+        </div>
+      </div>
+      <div class="grid_4">
+        <div id="placeholder"></div>
+        <div class="org">
+          <h3>For Legislators</h3>
+          <p class="blurb">Resources for legislation that promotes sustainability.</p>
+          <p><a href="http://www.basel.int/Home/tabid/2202/Default.aspx">The Basel Convention</a></p>
+          <p>The United States is not a signatory of the Basel Convention. Agitate to <a href="http://www.basel.int/Procedures/BecomingaParty/tabid/1280/Default.aspx">ratify the treaty</a> and ban the international trade of hazardous waste.</a>
+          <p><a href="http://www.electronicstakeback.com/promote-good-laws/state-legislation/">Inventory of State E-Waste Recycling Legislation</a></p>
+          <p>Electronics TakeBack Coalition's inventory of State E-Waste recycling legislation, including <a href="http://www.electronicstakeback.com/promote-good-laws/state-legislation-toolkit/">legislation toolkit</a> and <a href="http://www.electronicstakeback.com/wp-content/uploads/Compare_state_laws_chart.pdf">comparison of State Laws</a>.
+          <p><a href="https://repair.org/legislation/">Right to Repair, Fair Repair, & Copyright Reform</a></p>
+          <p>The Repair Association is promoting legislation at the State and Federal levels, and their site includes a legislative template.</p>
+          <p><a href="http://www.productstewardship.us/?State_EPR_Laws_Map">Product Stewardship Institute</a></p>
+          <p>Organization that develops and promotes the adoption of extended producer responsibility legislation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container_12 clearfix">
+      <div id="placeholder"></div>
+    </div>
+    <div class="container_12 clearfix" id="about"><a name="about"</a>
+      <h2 class="titles">About</h2>
+      <p>This project was created as part of <a href="www.jasminesoltani.com"> Jasmine Soltani's</a> thesis at ITP.</p>
+      <p> Icons for the production lifecycle diagram are from the <a href="https://thenounproject.com/"> Noun Project</a>.
+        Mining & Factory Worker & Internet Router Wifi by Gan Khoon Lay. Shipping by Alina Oleynik.
+        Laptop by Saeful Muslim. Repair by Leona Grande. Recycling by Nikita Kravchuk. Waste by Marie Van den Broeck. </p>
+    </div>
+    <div class="break"></div>
+  </body>
+</html>
